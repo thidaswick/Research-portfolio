@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 440" width="100%" height="100%" style="background-color: #ffffff; border-radius: 12px; font-family: 'IBM Plex Sans', -apple-system, sans-serif;">
+  <style>
+    .grid-line { stroke: #e5e7eb; stroke-dasharray: 4,4; stroke-width: 1; }
+    .axis-line { stroke: #cbd5e1; stroke-width: 1.5; }
+    .label-text { fill: #475569; font-size: 11px; font-family: 'IBM Plex Mono', monospace; }
+    .value-text { fill: #3b38c2; font-size: 11px; font-weight: 600; font-family: 'IBM Plex Mono', monospace; }
+    .title-text { fill: #0f172a; font-size: 14px; font-weight: 600; font-family: 'Fraunces', serif; }
+    .subtitle-text { fill: #64748b; font-size: 11px; }
+  </style>
+
+  <!-- Title & Meta Header -->
+  <text x="35" y="32" class="title-text">Random Forest Feature Importance Analysis</text>
+  <text x="35" y="48" class="subtitle-text">Relative feature contribution weights for Career Safety and Industry Stability model (N = 140)</text>
+
+  <!-- Horizontal Grid Lines -->
+  <line x1="210" y1="70" x2="630" y2="70" class="grid-line" />
+  <line x1="210" y1="130" x2="630" y2="130" class="grid-line" />
+  <line x1="210" y1="190" x2="630" y2="190" class="grid-line" />
+  <line x1="210" y1="250" x2="630" y2="250" class="grid-line" />
+  <line x1="210" y1="310" x2="630" y2="310" class="grid-line" />
+  <line x1="210" y1="370" x2="630" y2="370" class="grid-line" />
+
+  <!-- Vertical X Guides -->
+  <line x1="210" y1="65" x2="210" y2="385" class="axis-line" />
+  <line x1="315" y1="65" x2="315" y2="385" class="grid-line" />
+  <line x1="420" y1="65" x2="420" y2="385" class="grid-line" />
+  <line x1="525" y1="65" x2="525" y2="385" class="grid-line" />
+  <line x1="630" y1="65" x2="630" y2="385" class="grid-line" />
+
+  <text x="210" y="405" class="label-text" text-anchor="middle">0.00</text>
+  <text x="315" y="405" class="label-text" text-anchor="middle">0.05</text>
+  <text x="420" y="405" class="label-text" text-anchor="middle">0.10</text>
+  <text x="525" y="405" class="label-text" text-anchor="middle">0.15</text>
+  <text x="630" y="405" class="label-text" text-anchor="middle">0.20</text>
+
+  <!-- Bars for the 11 Verified Important Features -->
+  <!-- 1. career_strategy (0.178) -->
+  <text x="200" y="86" class="label-text" text-anchor="end">career_strategy</text>
+  <rect x="210" y="73" width="374" height="17" rx="4" fill="#3b38c2" />
+  <text x="592" y="86" class="value-text">0.178</text>
+
+  <!-- 2. switch_confidence (0.152) -->
+  <text x="200" y="114" class="label-text" text-anchor="end">switch_confidence</text>
+  <rect x="210" y="101" width="319" height="17" rx="4" fill="#4338ca" />
+  <text x="537" y="114" class="value-text">0.152</text>
+
+  <!-- 3. weekly_learning_time (0.134) -->
+  <text x="200" y="142" class="label-text" text-anchor="end">weekly_learning_time</text>
+  <rect x="210" y="129" width="281" height="17" rx="4" fill="#4f46e5" />
+  <text x="499" y="142" class="value-text">0.134</text>
+
+  <!-- 4. ai_replaceability (0.116) -->
+  <text x="200" y="170" class="label-text" text-anchor="end">ai_replaceability</text>
+  <rect x="210" y="157" width="244" height="17" rx="4" fill="#6366f1" />
+  <text x="462" y="170" class="value-text">0.116</text>
+
+  <!-- 5. domain_stability (0.098) -->
+  <text x="200" y="198" class="label-text" text-anchor="end">domain_stability</text>
+  <rect x="210" y="185" width="206" height="17" rx="4" fill="#818cf8" />
+  <text x="424" y="198" class="value-text">0.098</text>
+
+  <!-- 6. skill_update_frequency (0.082) -->
+  <text x="200" y="226" class="label-text" text-anchor="end">skill_update_frequency</text>
+  <rect x="210" y="213" width="172" height="17" rx="4" fill="#6366f1" opacity="0.85" />
+  <text x="390" y="226" class="value-text">0.082</text>
+
+  <!-- 7. role (0.070) -->
+  <text x="200" y="254" class="label-text" text-anchor="end">role</text>
+  <rect x="210" y="241" width="147" height="17" rx="4" fill="#6366f1" opacity="0.75" />
+  <text x="365" y="254" class="value-text">0.070</text>
+
+  <!-- 8. tech_stack_change (0.059) -->
+  <text x="200" y="282" class="label-text" text-anchor="end">tech_stack_change</text>
+  <rect x="210" y="269" width="124" height="17" rx="4" fill="#6366f1" opacity="0.65" />
+  <text x="342" y="282" class="value-text">0.059</text>
+
+  <!-- 9. job_market_trend (0.048) -->
+  <text x="200" y="310" class="label-text" text-anchor="end">job_market_trend</text>
+  <rect x="210" y="297" width="101" height="17" rx="4" fill="#6366f1" opacity="0.55" />
+  <text x="319" y="310" class="value-text">0.048</text>
+
+  <!-- 10. stability_indicators (0.038) -->
+  <text x="200" y="338" class="label-text" text-anchor="end">stability_indicators</text>
+  <rect x="210" y="325" width="80" height="17" rx="4" fill="#6366f1" opacity="0.45" />
+  <text x="298" y="338" class="value-text">0.038</text>
+
+  <!-- 11. years_experience (0.025) -->
+  <text x="200" y="366" class="label-text" text-anchor="end">years_experience</text>
+  <rect x="210" y="353" width="53" height="17" rx="4" fill="#6366f1" opacity="0.35" />
+  <text x="271" y="366" class="value-text">0.025</text>
+</svg>

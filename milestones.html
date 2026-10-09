@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Assessment Milestones — Multi-Causal AI Career Framework</title>
+  <meta name="description" content="Assessment milestones of the final year research project." />
+  <meta property="og:title" content="Assessment Milestones — Multi-Causal AI Career Framework" />
+  <meta property="og:description" content="Assessment milestones of the final year research project." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <!-- Accessible Skip Link -->
+  <a href="#main" class="sr-only focus:not-sr-only">Skip to content</a>
+
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a class="brand-link" href="index.html" aria-label="Multi-Causal AI Career Framework Home">
+        <span class="brand-badge" aria-hidden="true">MC</span>
+        <span class="brand-title">
+          Multi-Causal AI <span class="brand-subtitle">· Career Framework</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav aria-label="Primary" class="primary-nav">
+        <ul class="nav-list">
+          <li><a class="nav-item-link" href="index.html">Home</a></li>
+          <li><a class="nav-item-link" href="domain.html">Domain</a></li>
+          <li><a class="nav-item-link active" aria-current="page" href="milestones.html">Milestones</a></li>
+          <li><a class="nav-item-link" href="documents.html">Documents</a></li>
+          <li><a class="nav-item-link" href="presentations.html">Presentations</a></li>
+          <li><a class="nav-item-link" href="about.html">About Us</a></li>
+          <li><a class="nav-item-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-nav" type="button">
+        Menu
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <nav id="mobile-nav" class="mobile-nav-panel" aria-label="Mobile Navigation">
+      <ul class="mobile-nav-list">
+        <li><a class="mobile-nav-link" href="index.html">Home</a></li>
+        <li><a class="mobile-nav-link" href="domain.html">Domain</a></li>
+        <li><a class="mobile-nav-link active" href="milestones.html">Milestones</a></li>
+        <li><a class="mobile-nav-link" href="documents.html">Documents</a></li>
+        <li><a class="mobile-nav-link" href="presentations.html">Presentations</a></li>
+        <li><a class="mobile-nav-link" href="about.html">About Us</a></li>
+        <li><a class="mobile-nav-link" href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content Area -->
+  <main id="main">
+    <!-- Page Hero Banner -->
+    <section class="hero-bg">
+      <div class="grid-lines" aria-hidden="true"></div>
+      <div class="reveal max-w-7xl px-5 py-20 hero-content">
+        <p class="font-mono text-xs uppercase tracking-eyebrow opacity-70">Milestones</p>
+        <h1 class="mt-3 max-w-3xl text-4xl md:text-5xl font-medium" style="margin-top: 0.75rem;">
+          Assessment milestones
+        </h1>
+        <p class="mt-4 max-w-2xl text-base opacity-75" style="margin-top: 1rem; opacity: 0.85;">
+          Select an assessment to view its details. Dates and marks will be updated as they become official.
+        </p>
+      </div>
+    </section>
+
+    <!-- Assessment Selector & Card Content -->
+    <section class="section-wrapper">
+      <div class="grid gap-8 lg:grid-cols-3">
+        <!-- Selector Control Sidebar -->
+        <div class="space-y-4">
+          <label for="milestone-select" class="form-label" style="display: block;">Select Assessment</label>
+          <select id="milestone-select" class="milestone-select" aria-label="Select an Assessment Milestone">
+            <option value="0">Project Proposal</option>
+            <option value="1">Progress Presentation 1</option>
+            <option value="2">Progress Presentation 2</option>
+            <option value="3">Final Assessment</option>
+            <option value="4">Viva</option>
+          </select>
+
+          <!-- List of Assessment Buttons for Desktop Quick Click -->
+          <ol class="mt-6 space-y-1" style="display: grid; gap: 0.35rem; margin-top: 1.5rem;" aria-label="Milestone List">
+            <li>
+              <button type="button" class="milestone-btn active" aria-pressed="true">
+                <span class="font-mono text-xs text-muted-foreground mr-2" style="margin-right: 0.5rem;">01</span> Project Proposal
+              </button>
+            </li>
+            <li>
+              <button type="button" class="milestone-btn" aria-pressed="false">
+                <span class="font-mono text-xs text-muted-foreground mr-2" style="margin-right: 0.5rem;">02</span> Progress Presentation 1
+              </button>
+            </li>
+            <li>
+              <button type="button" class="milestone-btn" aria-pressed="false">
+                <span class="font-mono text-xs text-muted-foreground mr-2" style="margin-right: 0.5rem;">03</span> Progress Presentation 2
+              </button>
+            </li>
+            <li>
+              <button type="button" class="milestone-btn" aria-pressed="false">
+                <span class="font-mono text-xs text-muted-foreground mr-2" style="margin-right: 0.5rem;">04</span> Final Assessment
+              </button>
+            </li>
+            <li>
+              <button type="button" class="milestone-btn" aria-pressed="false">
+                <span class="font-mono text-xs text-muted-foreground mr-2" style="margin-right: 0.5rem;">05</span> Viva
+              </button>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Selected Assessment Details Box -->
+        <div class="card lg:col-span-2 reveal">
+          <div aria-live="polite">
+            <p id="milestone-num" class="font-mono text-xs text-primary font-medium">MILESTONE 1 OF 5</p>
+            <h2 id="milestone-title" class="mt-2 text-3xl font-medium" style="margin-top: 0.5rem;">Project Proposal</h2>
+            <p id="milestone-desc" class="mt-3 text-muted-foreground" style="margin-top: 0.75rem;">
+              Initial presentation of the research problem, objectives, scope and proposed methodology.
+            </p>
+
+            <dl class="mt-6 grid gap-4 sm:grid-cols-3" style="display: grid; margin-top: 1.75rem;">
+              <div class="rounded-lg bg-muted p-4" style="background-color: var(--muted); padding: 1rem; border-radius: var(--radius-sm);">
+                <dt class="text-xs text-muted-foreground">Date</dt>
+                <dd id="milestone-date" class="mt-1 font-medium text-foreground">To be updated</dd>
+              </div>
+
+              <div class="rounded-lg bg-muted p-4" style="background-color: var(--muted); padding: 1rem; border-radius: var(--radius-sm);">
+                <dt class="text-xs text-muted-foreground">Marks</dt>
+                <dd id="milestone-marks" class="mt-1 font-medium text-foreground">To be updated</dd>
+              </div>
+
+              <div class="rounded-lg bg-muted p-4" style="background-color: var(--muted); padding: 1rem; border-radius: var(--radius-sm);">
+                <dt class="text-xs text-muted-foreground">Status</dt>
+                <dd class="mt-1">
+                  <span id="milestone-status" class="badge-status">
+                    <span class="badge-status-dot"></span>
+                    To be updated
+                  </span>
+                </dd>
+              </div>
+            </dl>
+
+            <div class="mt-6 border-t pt-4 text-sm" style="margin-top: 1.75rem; padding-top: 1rem; border-top: 1px solid var(--border);">
+              <p class="text-muted-foreground">Related material</p>
+              <div class="flex items-center gap-2 mt-1" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 0.25rem;">
+                <a id="milestone-link" href="documents.html" class="font-medium text-primary hover:underline">
+                  Proposal Document →
+                </a>
+                <span id="milestone-filenote" class="text-xs text-muted-foreground">(file pending upload)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <p class="font-display text-lg">Comprehensive Career Development and Recruitment Framework using Multi-Causal AI</p>
+        <p class="mt-2 max-w-xl text-sm opacity-70" style="margin-top: 0.5rem; opacity: 0.75;">
+          Final Year Undergraduate Research Project — academic work, not a commercial product.
+        </p>
+      </div>
+      <ul class="footer-nav-grid" aria-label="Footer Navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="domain.html">Domain</a></li>
+        <li><a href="milestones.html">Milestones</a></li>
+        <li><a href="documents.html">Documents</a></li>
+        <li><a href="presentations.html">Presentations</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      © 2026 Comprehensive Career Development and Recruitment Framework
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/milestones.js"></script>
+</body>
+</html>

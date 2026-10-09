@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="100%" height="100%" style="background-color: #ffffff; border-radius: 12px; font-family: 'IBM Plex Sans', -apple-system, sans-serif;">
+  <style>
+    .comp-box { rx: 12; stroke-width: 1.5; transition: all 0.2s ease; }
+    .comp-title { font-size: 13px; font-weight: 600; fill: #0f172a; }
+    .comp-sub { font-size: 11px; fill: #64748b; font-family: 'IBM Plex Mono', monospace; }
+    .comp-desc { font-size: 10.5px; fill: #475569; }
+    .center-title { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 600; fill: #ffffff; text-anchor: middle; }
+    .center-sub { font-size: 11px; fill: #e0e7ff; text-anchor: middle; opacity: 0.9; }
+    .arrow-line { stroke: #6366f1; stroke-width: 2; stroke-dasharray: 4,4; }
+  </style>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#6366f1" />
+    </marker>
+    <radialGradient id="hubGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4338ca"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Component 1: Interview Readiness -->
+  <rect x="40" y="40" width="290" height="150" class="comp-box" fill="#f8fafc" stroke="#e2e8f0" />
+  <rect x="52" y="52" width="40" height="20" rx="4" fill="#ede9fe" />
+  <text x="62" y="66" fill="#4338ca" font-size="10" font-weight="700" font-family="'IBM Plex Mono', monospace">01</text>
+  <text x="52" y="94" class="comp-title">Interview Readiness Analysis</text>
+  <text x="52" y="112" class="comp-sub">IT22112446 · Kaluarachchi S.M.</text>
+  <text x="52" y="132" class="comp-desc">Explainable AI interview evaluation &amp;</text>
+  <text x="52" y="148" class="comp-desc">transparent career path guidance.</text>
+
+  <!-- Component 2: Behavior-Aware Impact -->
+  <rect x="570" y="40" width="290" height="150" class="comp-box" fill="#f8fafc" stroke="#e2e8f0" />
+  <rect x="582" y="52" width="40" height="20" rx="4" fill="#ede9fe" />
+  <text x="592" y="66" fill="#4338ca" font-size="10" font-weight="700" font-family="'IBM Plex Mono', monospace">02</text>
+  <text x="582" y="94" class="comp-title">Behavior-Aware Impact</text>
+  <text x="582" y="112" class="comp-sub">IT22176110 · Daundasekara D.M.D.C.</text>
+  <text x="582" y="132" class="comp-desc">Behavioral factor tracking &amp; longitudinal</text>
+  <text x="582" y="148" class="comp-desc">career progression forecasting.</text>
+
+  <!-- Component 3: Career Safety & Industry Stability -->
+  <rect x="40" y="280" width="290" height="155" class="comp-box" fill="#f8fafc" stroke="#6366f1" stroke-width="2" />
+  <rect x="52" y="292" width="40" height="20" rx="4" fill="#ede9fe" />
+  <text x="62" y="306" fill="#4338ca" font-size="10" font-weight="700" font-family="'IBM Plex Mono', monospace">03</text>
+  <text x="52" y="334" class="comp-title">Career Safety &amp; Industry Stability</text>
+  <text x="52" y="352" class="comp-sub">IT22201614 · WICKRAMASINGHE T.B.B.</text>
+  <text x="52" y="372" class="comp-desc">Random Forest risk classification (85% acc)</text>
+  <text x="52" y="388" class="comp-desc">&amp; domain stability evaluation (65.7% acc).</text>
+
+  <!-- Component 4: Employer Trust & Hiring Risk -->
+  <rect x="570" y="280" width="290" height="155" class="comp-box" fill="#f8fafc" stroke="#e2e8f0" />
+  <rect x="582" y="292" width="40" height="20" rx="4" fill="#ede9fe" />
+  <text x="592" y="306" fill="#4338ca" font-size="10" font-weight="700" font-family="'IBM Plex Mono', monospace">04</text>
+  <text x="582" y="334" class="comp-title">Employer Trust &amp; Hiring Risk</text>
+  <text x="582" y="352" class="comp-sub">IT22546470 · MUAZ M.M.R.</text>
+  <text x="582" y="372" class="comp-desc">AI-assisted trust evaluation &amp; candidate</text>
+  <text x="582" y="388" class="comp-desc">hiring risk assessment for recruiters.</text>
+
+  <!-- Connecting Arrows to Center -->
+  <line x1="330" y1="130" x2="385" y2="185" class="arrow-line" marker-end="url(#arrow)" />
+  <line x1="570" y1="130" x2="515" y2="185" class="arrow-line" marker-end="url(#arrow)" />
+  <line x1="330" y1="335" x2="385" y2="285" class="arrow-line" marker-end="url(#arrow)" />
+  <line x1="570" y1="335" x2="515" y2="285" class="arrow-line" marker-end="url(#arrow)" />
+
+  <!-- Center Core Framework Circle -->
+  <circle cx="450" cy="235" r="95" fill="url(#hubGrad)" stroke="#818cf8" stroke-width="3" filter="drop-shadow(0 10px 20px rgba(67, 56, 202, 0.35))" />
+  <text x="450" y="215" class="center-title">Multi-Causal AI</text>
+  <text x="450" y="235" class="center-title" font-size="13px">Framework</text>
+  <text x="450" y="260" class="center-sub">Unified Explainable</text>
+  <text x="450" y="275" class="center-sub">Decision Support</text>
+</svg>

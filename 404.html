@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page Not Found — Multi-Causal AI Career Framework</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    // GitHub Pages clean URL redirect handler
+    const path = window.location.pathname;
+    const cleanPaths = {
+      '/domain': 'domain.html',
+      '/milestones': 'milestones.html',
+      '/documents': 'documents.html',
+      '/presentations': 'presentations.html',
+      '/about': 'about.html',
+      '/contact': 'contact.html'
+    };
+    
+    for (const [route, target] of Object.entries(cleanPaths)) {
+      if (path.endsWith(route) || path.endsWith(route + '/')) {
+        window.location.replace(target);
+        break;
+      }
+    }
+  </script>
+</head>
+<body style="min-height: 100vh; display: grid; place-items: center; text-align: center; padding: 2rem;">
+  <div class="card" style="max-width: 28rem; padding: 2.5rem;">
+    <h1 class="text-6xl font-bold text-foreground">404</h1>
+    <h2 class="text-xl font-semibold mt-4">Page not found</h2>
+    <p class="text-sm text-muted-foreground mt-2">
+      The requested research page does not exist or has been moved.
+    </p>
+    <div class="mt-6" style="margin-top: 1.5rem;">
+      <a href="index.html" class="btn btn-primary">Return to Homepage</a>
+    </div>
+  </div>
+</body>
+</html>
