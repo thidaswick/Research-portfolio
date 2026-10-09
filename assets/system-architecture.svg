@@ -38,7 +38,7 @@
   <text x="582" y="148" class="comp-desc">career progression forecasting.</text>
 
   <!-- Component 3: Career Safety & Industry Stability -->
-  <rect x="40" y="280" width="290" height="155" class="comp-box" fill="#f8fafc" stroke="#6366f1" stroke-width="2" />
+  <rect x="40" y="280" width="290" height="155" class="comp-box" fill="#f8fafc" stroke="#e2e8f0" />
   <rect x="52" y="292" width="40" height="20" rx="4" fill="#ede9fe" />
   <text x="62" y="306" fill="#4338ca" font-size="10" font-weight="700" font-family="'IBM Plex Mono', monospace">03</text>
   <text x="52" y="334" class="comp-title">Career Safety &amp; Industry Stability</text>
