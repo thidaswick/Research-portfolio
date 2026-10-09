@@ -1291,6 +1291,31 @@ footer.site-footer {
   box-shadow: 0 2px 6px rgba(99, 102, 241, 0.12);
 }
 
+.team-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 1.65rem;
+  margin-top: 0.25rem;
+}
+
+.team-leader-badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--primary);
+  background-color: var(--accent);
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  padding: 0.1rem 0.5rem;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
 /* ==========================================================================
    Tech Stack Showcase Section
    ========================================================================== */
