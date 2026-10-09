@@ -12,7 +12,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 </head>
@@ -69,102 +69,201 @@
     <section class="hero-bg">
       <div class="grid-lines" aria-hidden="true"></div>
       <div class="reveal max-w-7xl px-5 py-20 hero-content">
-        <p class="font-mono text-xs uppercase tracking-eyebrow opacity-70">Milestones</p>
+        <span class="hero-wallpaper-pill" style="margin-bottom: 0.75rem;">
+          Assessment Milestones
+        </span>
         <h1 class="mt-3 max-w-3xl text-4xl md:text-5xl font-medium" style="margin-top: 0.75rem; color: #ffffff;">
-          Assessment milestones
+          Timeline in Brief
         </h1>
-        <p class="mt-4 max-w-2xl text-base opacity-75" style="margin-top: 1rem; opacity: 0.85;">
-          Select an assessment to view its details. Dates and marks will be updated as they become official.
+        <p class="mt-4 max-w-2xl text-base opacity-75" style="margin-top: 1rem; opacity: 0.88; font-size: 1.05rem;">
+          Key evaluation stages, deliverable deadlines, mark weightings and progress metrics throughout the undergraduate research year.
         </p>
       </div>
     </section>
 
-    <!-- Assessment Selector & Card Content -->
-    <section class="section-wrapper">
-      <div class="grid gap-8 lg:grid-cols-3">
-        <!-- Selector Control Sidebar -->
-        <div class="space-y-4">
-          <label for="milestone-select" class="form-label" style="display: block;">Select Assessment</label>
-          <select id="milestone-select" class="milestone-select" aria-label="Select an Assessment Milestone">
-            <option value="0">Project Proposal</option>
-            <option value="1">Progress Presentation 1</option>
-            <option value="2">Progress Presentation 2</option>
-            <option value="3">Final Assessment</option>
-            <option value="4">Viva</option>
-          </select>
-
-          <!-- List of Assessment Buttons for Desktop Quick Click -->
-          <ol class="mt-6 space-y-1" style="display: grid; gap: 0.35rem; margin-top: 1.5rem;" aria-label="Milestone List">
-            <li>
-              <button type="button" class="milestone-btn active" aria-pressed="true">
-                <span class="font-mono text-xs text-muted-foreground mr-2" style="margin-right: 0.5rem;">01</span> Project Proposal
-              </button>
-            </li>
-            <li>
-              <button type="button" class="milestone-btn" aria-pressed="false">
-                <span class="font-mono text-xs text-muted-foreground mr-2" style="margin-right: 0.5rem;">02</span> Progress Presentation 1
-              </button>
-            </li>
-            <li>
-              <button type="button" class="milestone-btn" aria-pressed="false">
-                <span class="font-mono text-xs text-muted-foreground mr-2" style="margin-right: 0.5rem;">03</span> Progress Presentation 2
-              </button>
-            </li>
-            <li>
-              <button type="button" class="milestone-btn" aria-pressed="false">
-                <span class="font-mono text-xs text-muted-foreground mr-2" style="margin-right: 0.5rem;">04</span> Final Assessment
-              </button>
-            </li>
-            <li>
-              <button type="button" class="milestone-btn" aria-pressed="false">
-                <span class="font-mono text-xs text-muted-foreground mr-2" style="margin-right: 0.5rem;">05</span> Viva
-              </button>
-            </li>
-          </ol>
+    <!-- Milestones Timeline Section -->
+    <section class="section-wrapper" id="milestones">
+      <!-- KPI Metric Highlights -->
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 mb-12 reveal" style="margin-bottom: 3.5rem;">
+        <div class="kpi-stat-card">
+          <p class="kpi-stat-val">08</p>
+          <p class="kpi-stat-label">Assessment Stages</p>
         </div>
+        <div class="kpi-stat-card">
+          <p class="kpi-stat-val">100</p>
+          <p class="kpi-stat-label">Total Marks Allocated</p>
+        </div>
+        <div class="kpi-stat-card">
+          <p class="kpi-stat-val">100%</p>
+          <p class="kpi-stat-label">Cumulative Curriculum</p>
+        </div>
+        <div class="kpi-stat-card">
+          <p class="kpi-stat-val">SLIIT</p>
+          <p class="kpi-stat-label">Faculty of Computing</p>
+        </div>
+      </div>
 
-        <!-- Selected Assessment Details Box -->
-        <div class="card lg:col-span-2 reveal">
-          <div aria-live="polite">
-            <p id="milestone-num" class="font-mono text-xs text-primary font-medium">MILESTONE 1 OF 5</p>
-            <h2 id="milestone-title" class="mt-2 text-3xl font-medium" style="margin-top: 0.5rem;">Project Proposal</h2>
-            <p id="milestone-desc" class="mt-3 text-muted-foreground" style="margin-top: 0.75rem;">
-              Initial presentation of the research problem, objectives, scope and proposed methodology.
-            </p>
-
-            <dl class="mt-6 grid gap-4 sm:grid-cols-3" style="display: grid; margin-top: 1.75rem;">
-              <div class="rounded-lg bg-muted p-4" style="background-color: var(--muted); padding: 1rem; border-radius: var(--radius-sm);">
-                <dt class="text-xs text-muted-foreground">Date</dt>
-                <dd id="milestone-date" class="mt-1 font-medium text-foreground">To be updated</dd>
+      <div class="milestones-wrapper">
+        <ul class="timeline">
+          <!-- 01: Project Proposal -->
+          <li class="timeline-event reveal">
+            <label class="timeline-event-icon" aria-hidden="true"></label>
+            <div class="timeline-event-copy">
+              <span class="timeline-event-thumbnail">March 2026</span>
+              <h3>Project Proposal</h3>
+              <p class="timeline-event-desc">
+                A Project Proposal is presented to potential sponsors, faculty supervisors and the evaluation panel to establish research feasibility, define problem scope, review literature, and receive formal project approval.
+              </p>
+              <div class="timeline-marks-row">
+                <span class="timeline-marks-label">Marks Allocated :</span>
+                <span class="timeline-marks-val">06 Marks</span>
               </div>
-
-              <div class="rounded-lg bg-muted p-4" style="background-color: var(--muted); padding: 1rem; border-radius: var(--radius-sm);">
-                <dt class="text-xs text-muted-foreground">Marks</dt>
-                <dd id="milestone-marks" class="mt-1 font-medium text-foreground">To be updated</dd>
-              </div>
-
-              <div class="rounded-lg bg-muted p-4" style="background-color: var(--muted); padding: 1rem; border-radius: var(--radius-sm);">
-                <dt class="text-xs text-muted-foreground">Status</dt>
-                <dd class="mt-1">
-                  <span id="milestone-status" class="badge-status">
-                    <span class="badge-status-dot"></span>
-                    To be updated
-                  </span>
-                </dd>
-              </div>
-            </dl>
-
-            <div class="mt-6 border-t pt-4 text-sm" style="margin-top: 1.75rem; padding-top: 1rem; border-top: 1px solid var(--border);">
-              <p class="text-muted-foreground">Related material</p>
-              <div class="flex items-center gap-2 mt-1" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 0.25rem;">
-                <a id="milestone-link" href="documents.html" class="font-medium text-primary hover:underline">
-                  Proposal Document →
-                </a>
-                <span id="milestone-filenote" class="text-xs text-muted-foreground">(file pending upload)</span>
+              <div class="timeline-progress" role="progressbar" aria-valuenow="6" aria-valuemin="0" aria-valuemax="100">
+                <div class="timeline-progress-bar timeline-progress-current" style="width: 6%;">6%</div>
               </div>
             </div>
-          </div>
-        </div>
+          </li>
+
+          <!-- 02: Progress Presentation I -->
+          <li class="timeline-event reveal">
+            <label class="timeline-event-icon" aria-hidden="true"></label>
+            <div class="timeline-event-copy">
+              <span class="timeline-event-thumbnail">June 2026</span>
+              <h3>Progress Presentation I</h3>
+              <p class="timeline-event-desc">
+                Progress Presentation I reviews the 50% completion status of the project. This assessment evaluates initial data preprocessing, early multi-causal model training, and reveals any design or requirement inconsistencies.
+              </p>
+              <div class="timeline-marks-row">
+                <span class="timeline-marks-label">Marks Allocated :</span>
+                <span class="timeline-marks-val">06 Marks</span>
+              </div>
+              <div class="timeline-progress" role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100">
+                <div class="timeline-progress-bar timeline-progress-prev" style="width: 6%;"></div>
+                <div class="timeline-progress-bar timeline-progress-current" style="width: 6%;">6%</div>
+              </div>
+            </div>
+          </li>
+
+          <!-- 03: Research Paper -->
+          <li class="timeline-event reveal">
+            <label class="timeline-event-icon" aria-hidden="true"></label>
+            <div class="timeline-event-copy">
+              <span class="timeline-event-thumbnail">July 2026</span>
+              <h3>Research Paper</h3>
+              <p class="timeline-event-desc">
+                Describes what you contribute to existing knowledge, giving due recognition to all work that you referred to in making new knowledge. Covers experimental results, Random Forest validation, and explainable AI metrics.
+              </p>
+              <div class="timeline-marks-row">
+                <span class="timeline-marks-label">Marks Allocated :</span>
+                <span class="timeline-marks-val">10 Marks</span>
+              </div>
+              <div class="timeline-progress" role="progressbar" aria-valuenow="22" aria-valuemin="0" aria-valuemax="100">
+                <div class="timeline-progress-bar timeline-progress-prev" style="width: 12%;"></div>
+                <div class="timeline-progress-bar timeline-progress-current" style="width: 10%;">10%</div>
+              </div>
+            </div>
+          </li>
+
+          <!-- 04: Progress Presentation II -->
+          <li class="timeline-event reveal">
+            <label class="timeline-event-icon" aria-hidden="true"></label>
+            <div class="timeline-event-copy">
+              <span class="timeline-event-thumbnail">September 2026</span>
+              <h3>Progress Presentation II</h3>
+              <p class="timeline-event-desc">
+                Progress Presentation II reviews the 90% completion status demonstration of the project, showcasing end-to-end component integration alongside an academic poster presentation describing the research framework as a whole.
+              </p>
+              <div class="timeline-marks-row">
+                <span class="timeline-marks-label">Marks Allocated :</span>
+                <span class="timeline-marks-val">18 Marks</span>
+              </div>
+              <div class="timeline-progress" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                <div class="timeline-progress-bar timeline-progress-prev" style="width: 22%;"></div>
+                <div class="timeline-progress-bar timeline-progress-current" style="width: 18%;">18%</div>
+              </div>
+            </div>
+          </li>
+
+          <!-- 05: Website Assessment -->
+          <li class="timeline-event reveal">
+            <label class="timeline-event-icon" aria-hidden="true"></label>
+            <div class="timeline-event-copy">
+              <span class="timeline-event-thumbnail">October 2026</span>
+              <h3>Website Assessment</h3>
+              <p class="timeline-event-desc">
+                The Website helps to promote our research project and reveals all details related to the project including architectural schematics, team profiles, downloadable deliverables, and domain methodologies.
+              </p>
+              <div class="timeline-marks-row">
+                <span class="timeline-marks-label">Marks Allocated :</span>
+                <span class="timeline-marks-val">02 Marks</span>
+              </div>
+              <div class="timeline-progress" role="progressbar" aria-valuenow="42" aria-valuemin="0" aria-valuemax="100">
+                <div class="timeline-progress-bar timeline-progress-prev" style="width: 40%;"></div>
+                <div class="timeline-progress-bar timeline-progress-current" style="width: 2%;">2%</div>
+              </div>
+            </div>
+          </li>
+
+          <!-- 06: Logbook -->
+          <li class="timeline-event reveal">
+            <label class="timeline-event-icon" aria-hidden="true"></label>
+            <div class="timeline-event-copy">
+              <span class="timeline-event-thumbnail">November 2026</span>
+              <h3>Logbook &amp; Status Documents</h3>
+              <p class="timeline-event-desc">
+                Status of the project is validated through the Logbook. This also includes Status Documents 1 &amp; 2, supervisor feedback logs, and weekly sprint progress records across all 4 research components.
+              </p>
+              <div class="timeline-marks-row">
+                <span class="timeline-marks-label">Marks Allocated :</span>
+                <span class="timeline-marks-val">03 Marks</span>
+              </div>
+              <div class="timeline-progress" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+                <div class="timeline-progress-bar timeline-progress-prev" style="width: 42%;"></div>
+                <div class="timeline-progress-bar timeline-progress-current" style="width: 3%;">3%</div>
+              </div>
+            </div>
+          </li>
+
+          <!-- 07: Final Report (Thesis) -->
+          <li class="timeline-event reveal">
+            <label class="timeline-event-icon" aria-hidden="true"></label>
+            <div class="timeline-event-copy">
+              <span class="timeline-event-thumbnail">November 2026</span>
+              <h3>Final Report (Thesis)</h3>
+              <p class="timeline-event-desc">
+                Final Report evaluates the completed project done throughout the year. Marks mentioned below include marks for Individual &amp; Group reports and the complete comprehensive dissertation submission.
+              </p>
+              <div class="timeline-marks-row">
+                <span class="timeline-marks-label">Marks Allocated :</span>
+                <span class="timeline-marks-val">19 Marks</span>
+              </div>
+              <div class="timeline-progress" role="progressbar" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100">
+                <div class="timeline-progress-bar timeline-progress-prev" style="width: 45%;"></div>
+                <div class="timeline-progress-bar timeline-progress-current" style="width: 19%;">19%</div>
+              </div>
+            </div>
+          </li>
+
+          <!-- 08: Final Presentation & Viva -->
+          <li class="timeline-event reveal">
+            <label class="timeline-event-icon" aria-hidden="true"></label>
+            <div class="timeline-event-copy">
+              <span class="timeline-event-thumbnail">November 2026</span>
+              <h3>Final Presentation &amp; Viva</h3>
+              <p class="timeline-event-desc">
+                Viva is held individually to assess each member's contribution to the project, model accuracy, architectural convergence, and response to rigorous oral questioning by the academic panel.
+              </p>
+              <div class="timeline-marks-row">
+                <span class="timeline-marks-label">Marks Allocated :</span>
+                <span class="timeline-marks-val">20 Marks</span>
+              </div>
+              <div class="timeline-progress" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <div class="timeline-progress-bar timeline-progress-prev" style="width: 80%;"></div>
+                <div class="timeline-progress-bar timeline-progress-current" style="width: 20%;">20%</div>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
@@ -194,6 +293,5 @@
   </footer>
 
   <script src="js/main.js"></script>
-  <script src="js/milestones.js"></script>
 </body>
 </html>

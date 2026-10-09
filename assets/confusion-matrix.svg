@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 440" width="100%" height="100%" style="background-color: #ffffff; border-radius: 12px; font-family: 'IBM Plex Sans', -apple-system, sans-serif;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 440" width="100%" height="100%" style="background-color: #ffffff; border-radius: 12px; font-family: 'Poppins', -apple-system, sans-serif;">
   <style>
-    .title-text { fill: #0f172a; font-size: 14px; font-weight: 600; font-family: 'Fraunces', serif; }
+    .title-text { fill: #0f172a; font-size: 14px; font-weight: 600; font-family: 'Poppins', sans-serif; }
     .subtitle-text { fill: #64748b; font-size: 11px; }
     .header-text { fill: #1e293b; font-size: 12px; font-weight: 600; font-family: 'IBM Plex Mono', monospace; }
     .cell-val { fill: #0f172a; font-size: 15px; font-weight: 700; font-family: 'IBM Plex Mono', monospace; }
