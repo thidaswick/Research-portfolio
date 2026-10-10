@@ -17,7 +17,9 @@ class RobustHTTPRequestHandler(SimpleHTTPRequestHandler):
         if path.lower().endswith('.pdf'):
             self.send_header('Accept-Ranges', 'bytes')
             self.send_header('Content-Disposition', f'inline; filename="{os.path.basename(path)}"')
-            self.send_header('Cache-Control', 'public, max-age=3600')
+            self.send_header('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0')
+            self.send_header('Pragma', 'no-cache')
+            self.send_header('Expires', '0')
         else:
             self.send_header('Cache-Control', 'no-cache, must-revalidate')
         super().end_headers()
@@ -68,7 +70,9 @@ class RobustHTTPRequestHandler(SimpleHTTPRequestHandler):
         self.send_header('Content-Length', str(content_length))
         self.send_header('Content-Disposition', f'inline; filename="{os.path.basename(path)}"')
         self.send_header('Accept-Ranges', 'bytes')
-        self.send_header('Cache-Control', 'public, max-age=3600')
+        self.send_header('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0')
+        self.send_header('Pragma', 'no-cache')
+        self.send_header('Expires', '0')
         self.send_header('Last-Modified', self.date_time_string(os.path.getmtime(path)))
         SimpleHTTPRequestHandler.end_headers(self)
 
@@ -83,13 +87,13 @@ class RobustHTTPRequestHandler(SimpleHTTPRequestHandler):
                         break
                     self.wfile.write(chunk)
                     remaining -= len(chunk)
-        except (ConnectionResetError, BrokenPipeError):
+        except (ConnectionResetError, BrokenPipeError, ConnectionAbortedError):
             pass
 
     def copyfile(self, source, outputfile):
         try:
             super().copyfile(source, outputfile)
-        except (ConnectionResetError, BrokenPipeError):
+        except (ConnectionResetError, BrokenPipeError, ConnectionAbortedError):
             pass
 
 if __name__ == '__main__':
