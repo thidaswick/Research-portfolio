@@ -1,13 +1,26 @@
 /**
- * Multi-Causal AI Career Framework
- * Contact Form Validation & State Handler
+ * Research Portfolio
+ * Contact Form In-Page Email Sender
  */
+
+// If opened directly as a local file (file:///), automatically switch to the local server
+// so AJAX in-page submissions work seamlessly without redirects or mail clients
+if (window.location.protocol === 'file:') {
+  window.location.replace('http://localhost:8000/contact.html');
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contact-form');
   const alertSuccess = document.getElementById('contact-alert-success');
+  const alertError = document.getElementById('contact-alert-error');
+  const submitBtn = document.getElementById('submit-btn');
 
   if (!form) return;
+
+  function hideAllAlerts() {
+    if (alertSuccess) alertSuccess.style.display = 'none';
+    if (alertError) alertError.style.display = 'none';
+  }
 
   const fields = {
     name: document.getElementById('name'),
@@ -58,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     let hasErrors = false;
 
@@ -80,15 +93,61 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    if (!hasErrors) {
-      if (alertSuccess) {
-        alertSuccess.style.display = 'block';
-        alertSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    if (hasErrors) {
+      hideAllAlerts();
+      return;
+    }
+
+    // Set sending button state
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending Message...';
+    }
+    hideAllAlerts();
+
+    const payload = {
+      name: fields.name.value.trim(),
+      email: fields.email.value.trim(),
+      subject: fields.subject.value.trim(),
+      _subject: `[Research Portfolio] ${fields.subject.value.trim()}`,
+      message: fields.message.value.trim(),
+      _captcha: 'false',
+      _template: 'table'
+    };
+
+    try {
+      // Obfuscated recipient to prevent email harvesting and scrapers
+      const _e = atob('dGhpZGFzd2lja3JhbWFzaW5naGU4QGdtYWlsLmNvbQ==');
+      const response = await fetch(`https://formsubmit.co/ajax/${_e}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const data = await response.json().catch(() => null);
+
+      if (data && (data.success === 'true' || data.success === true)) {
+        if (alertSuccess) {
+          alertSuccess.style.display = 'block';
+          alertSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+        form.reset();
+      } else {
+        throw new Error(data && data.message ? data.message : 'Submission failed');
       }
-      form.reset();
-    } else {
-      if (alertSuccess) {
-        alertSuccess.style.display = 'none';
+    } catch (err) {
+      console.warn('Submission error:', err);
+      if (alertError) {
+        alertError.style.display = 'block';
+        alertError.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit Message';
       }
     }
   });

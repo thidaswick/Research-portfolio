@@ -74,7 +74,7 @@
           Get in touch
         </h1>
         <p class="mt-4 max-w-2xl text-base opacity-75" style="margin-top: 1rem; opacity: 0.85;">
-          Contact details will be updated by the research team.
+          Get in touch with our research team using the inquiry form below.
         </p>
       </div>
     </section>
@@ -100,7 +100,9 @@
             </div>
             <div>
               <dt class="text-xs text-muted-foreground uppercase tracking-wider font-mono">Email</dt>
-              <dd class="mt-1 font-medium text-foreground">To be updated</dd>
+              <dd class="mt-1 font-medium text-foreground">
+                Available via message form
+              </dd>
             </div>
             <div>
               <dt class="text-xs text-muted-foreground uppercase tracking-wider font-mono">Telephone</dt>
@@ -119,6 +121,9 @@
           <h2 id="form-heading" class="text-xl font-medium mb-4">Send a Message</h2>
           
           <form id="contact-form" class="space-y-4" novalidate style="display: grid; gap: 1.25rem;">
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_subject" id="form-subject-hidden" value="[Research Portfolio] New Contact Inquiry" />
             <div class="grid gap-4 sm:grid-cols-2">
               <!-- Name Input -->
               <div class="form-group">
@@ -151,18 +156,25 @@
 
             <!-- Submit Button & Disclaimer -->
             <div>
-              <button type="submit" class="btn btn-primary px-6 py-2.5">
+              <button id="submit-btn" type="submit" class="btn btn-primary px-6 py-2.5">
                 Submit Message
               </button>
               <p class="text-xs text-muted-foreground mt-3" style="margin-top: 0.75rem;">
-                This website has no backend — submitted messages are validated in your browser only and are not sent anywhere.
+                Your message will be delivered directly to the research team.
               </p>
             </div>
 
             <!-- Success State Banner -->
             <div id="contact-alert-success" class="alert-box alert-success" style="display: none;" role="status" aria-live="polite">
-              <p>
-                Your form passed validation. This is a demo only — the message was <strong>not sent</strong>. Please use the team's official email once published.
+              <p id="contact-alert-success-msg">
+                ✓ Thank you! Your message has been sent successfully. We will get back to you soon.
+              </p>
+            </div>
+
+            <!-- Error State Banner -->
+            <div id="contact-alert-error" class="alert-box alert-error" style="display: none; margin-top: 1rem;" role="status" aria-live="polite">
+              <p id="contact-alert-error-msg">
+                Unable to send message automatically. Please try again later.
               </p>
             </div>
           </form>
@@ -175,7 +187,7 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div>
-        <p class="font-display text-lg">Comprehensive Career Development and Recruitment Framework using Multi-Causal AI</p>
+        <p class="font-display text-lg">Comprehensive Career Development and Recruitment Framework</p>
         <p class="mt-2 max-w-xl text-sm opacity-70" style="margin-top: 0.5rem; opacity: 0.75;">
           Final Year Undergraduate Research Project — academic work, not a commercial product.
         </p>

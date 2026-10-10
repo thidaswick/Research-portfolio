@@ -37,19 +37,28 @@ function initMobileMenu() {
 // Active Nav link based on current URL
 function initActiveNav() {
   const currentPath = window.location.pathname.toLowerCase();
+  const segments = currentPath.split(/[/\\]/).filter(Boolean);
+  const currentFileName = segments.length > 0 ? segments[segments.length - 1] : '';
+  const isHome = !currentFileName || currentFileName === 'index.html';
+
   const navLinks = document.querySelectorAll('.nav-item-link, .mobile-nav-link');
 
   navLinks.forEach((link) => {
     const href = link.getAttribute('href');
     if (!href) return;
 
-    const linkPath = href.toLowerCase();
-    const isHome = (currentPath === '/' || currentPath.endsWith('index.html')) && (linkPath === '/' || linkPath === 'index.html' || linkPath === './');
-    const isMatch = isHome || (currentPath.includes(linkPath.replace('.html', '')) && linkPath !== '/' && linkPath !== 'index.html' && linkPath !== './');
+    const linkSegments = href.toLowerCase().split(/[/\\]/).filter(Boolean);
+    const linkFileName = linkSegments.length > 0 ? linkSegments[linkSegments.length - 1] : '';
+    const isLinkHome = !linkFileName || linkFileName === 'index.html' || href === '/' || href === './';
+
+    const isMatch = isHome ? isLinkHome : (linkFileName === currentFileName);
 
     if (isMatch) {
       link.classList.add('active');
       link.setAttribute('aria-current', 'page');
+    } else {
+      link.classList.remove('active');
+      link.removeAttribute('aria-current');
     }
   });
 }
@@ -74,7 +83,16 @@ function initDocModal() {
       modalActionBtn.textContent = actionType === 'Download' ? 'Download File' : 'Open in New Tab';
       modalActionBtn.onclick = () => {
         if (path) {
-          window.open(path, '_blank');
+          if (actionType === 'Download') {
+            const dlLink = document.createElement('a');
+            dlLink.href = path;
+            dlLink.download = path.split('/').pop();
+            document.body.appendChild(dlLink);
+            dlLink.click();
+            document.body.removeChild(dlLink);
+          } else {
+            window.open(path, '_blank');
+          }
         } else {
           alert('Document file is pending upload. Please check back later.');
         }
