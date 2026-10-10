@@ -3,11 +3,6 @@
  * Contact Form In-Page Email Sender
  */
 
-// If opened directly as a local file (file:///), automatically switch to the local server
-// so AJAX in-page submissions work seamlessly without redirects or mail clients
-if (window.location.protocol === 'file:') {
-  window.location.replace('http://localhost:8000/contact.html');
-}
 
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contact-form');
