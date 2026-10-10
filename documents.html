@@ -236,12 +236,9 @@
         <div class="flex flex-wrap items-center gap-3" style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem;">
           <div class="docs-filter-tabs" role="tablist" aria-label="Document Category Filter">
             <button type="button" class="docs-filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
-            <button type="button" class="docs-filter-btn" data-filter="project" role="tab" aria-selected="false">Project Documents</button>
-            <button type="button" class="docs-filter-btn" data-filter="research" role="tab" aria-selected="false">Research Documents</button>
             <button type="button" class="docs-filter-btn" data-filter="individual" role="tab" aria-selected="false">Individual Documents</button>
-            <button type="button" class="docs-filter-btn" data-filter="other" role="tab" aria-selected="false">Other</button>
           </div>
-          <span id="doc-results-count" class="docs-count-text">Showing all 9 documents</span>
+          <span id="doc-results-count" class="docs-count-text">Showing all 4 documents</span>
         </div>
       </div>
 
@@ -262,148 +259,14 @@
     <!-- Document Categories Root Container -->
     <div id="documents-categories-root">
       
-      <!-- Category 1: Project Documents -->
-      <section class="section-wrapper" id="cat-section-project">
-        <p class="section-eyebrow">Project documents</p>
-        <h2 class="section-title">Core framework documents</h2>
-        <p class="section-desc" style="margin-top: -1.25rem; margin-bottom: 2rem;">Governance charter, research proposals, checklists, and academic milestone documentation.</p>
-        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3" id="cat-grid-project">
-          
-          <!-- Project Charter -->
-          <article class="card flex flex-col justify-between hover-lift reveal" id="doc-card-project-charter" style="display: flex; flex-direction: column; justify-content: space-between;">
-            <div>
-              <div class="flex items-center justify-between gap-3" style="display: flex; justify-content: space-between; align-items: center;">
-                <div class="flex items-center gap-2" style="display: flex; align-items: center; gap: 0.5rem;">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary" aria-hidden="true">
-                    <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/>
-                  </svg>
-                  <span class="badge-type">PDF</span>
-                </div>
-                <span class="badge-status" title="Pending file upload to /documents/">
-                  <span class="badge-status-dot"></span>File unavailable
-                </span>
-              </div>
-              <h3 class="card-title text-lg font-medium mt-4">Project Charter</h3>
-              <p class="card-text text-sm text-muted-foreground mt-2">Initial project charter establishing scope, objectives, stakeholder roles, and governance.</p>
-            </div>
-            <div class="doc-card-actions">
-              <button type="button" class="btn btn-secondary btn-disabled text-xs px-3 py-1.5" disabled aria-disabled="true" title="File unavailable">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
-                <span>View PDF</span>
-              </button>
-              <button type="button" class="btn btn-outline btn-disabled text-xs px-3 py-1.5" disabled aria-disabled="true" title="File unavailable">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                <span>Download</span>
-              </button>
-            </div>
-          </article>
-
-          <!-- Proposal Document -->
-          <article class="card flex flex-col justify-between hover-lift reveal" id="doc-card-project-proposal" style="display: flex; flex-direction: column; justify-content: space-between;">
-            <div>
-              <div class="flex items-center justify-between gap-3" style="display: flex; justify-content: space-between; align-items: center;">
-                <div class="flex items-center gap-2" style="display: flex; align-items: center; gap: 0.5rem;">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary" aria-hidden="true">
-                    <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/>
-                  </svg>
-                  <span class="badge-type">PDF</span>
-                </div>
-                <span class="badge-status" title="Pending file upload to /documents/">
-                  <span class="badge-status-dot"></span>File unavailable
-                </span>
-              </div>
-              <h3 class="card-title text-lg font-medium mt-4">Proposal Document</h3>
-              <p class="card-text text-sm text-muted-foreground mt-2">Formal research proposal covering domain background, research gap, objectives, and methodology.</p>
-            </div>
-            <div class="doc-card-actions">
-              <button type="button" class="btn btn-secondary btn-disabled text-xs px-3 py-1.5" disabled aria-disabled="true" title="File unavailable">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
-                <span>View PDF</span>
-              </button>
-              <button type="button" class="btn btn-outline btn-disabled text-xs px-3 py-1.5" disabled aria-disabled="true" title="File unavailable">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                <span>Download</span>
-              </button>
-            </div>
-          </article>
-
-          <!-- Check List Documents -->
-          <article class="card flex flex-col justify-between hover-lift reveal" id="doc-card-checklist-documents" style="display: flex; flex-direction: column; justify-content: space-between;">
-            <div>
-              <div class="flex items-center justify-between gap-3" style="display: flex; justify-content: space-between; align-items: center;">
-                <div class="flex items-center gap-2" style="display: flex; align-items: center; gap: 0.5rem;">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary" aria-hidden="true">
-                    <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/>
-                  </svg>
-                  <span class="badge-type">PDF</span>
-                </div>
-                <span class="badge-status" title="Pending file upload to /documents/">
-                  <span class="badge-status-dot"></span>File unavailable
-                </span>
-              </div>
-              <h3 class="card-title text-lg font-medium mt-4">Check List Documents</h3>
-              <p class="card-text text-sm text-muted-foreground mt-2">Assessment checklists and milestone compliance records submitted throughout the lifecycle.</p>
-            </div>
-            <div class="doc-card-actions">
-              <button type="button" class="btn btn-secondary btn-disabled text-xs px-3 py-1.5" disabled aria-disabled="true" title="File unavailable">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
-                <span>View PDF</span>
-              </button>
-              <button type="button" class="btn btn-outline btn-disabled text-xs px-3 py-1.5" disabled aria-disabled="true" title="File unavailable">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                <span>Download</span>
-              </button>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- Category 2: Research Documents -->
-      <section class="section-wrapper bg-secondary-section" id="cat-section-research" style="border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
-        <p class="section-eyebrow">Research documents</p>
-        <h2 class="section-title">Academic reports & publications</h2>
-        <p class="section-desc" style="margin-top: -1.25rem; margin-bottom: 2rem;">Comprehensive research deliverables, empirical findings, and unified framework papers.</p>
-        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3" id="cat-grid-research">
-          
-          <!-- Final Research Document -->
-          <article class="card flex flex-col justify-between hover-lift reveal" id="doc-card-final-report" style="display: flex; flex-direction: column; justify-content: space-between;">
-            <div>
-              <div class="flex items-center justify-between gap-3" style="display: flex; justify-content: space-between; align-items: center;">
-                <div class="flex items-center gap-2" style="display: flex; align-items: center; gap: 0.5rem;">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary" aria-hidden="true">
-                    <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/>
-                  </svg>
-                  <span class="badge-type">PDF</span>
-                </div>
-                <span class="badge-status" title="Pending file upload to /documents/">
-                  <span class="badge-status-dot"></span>File unavailable
-                </span>
-              </div>
-              <h3 class="card-title text-lg font-medium mt-4">Final Research Document</h3>
-              <p class="card-text text-sm text-muted-foreground mt-2">Complete final research report and comprehensive academic paper of the integrated framework.</p>
-            </div>
-            <div class="doc-card-actions">
-              <button type="button" class="btn btn-secondary btn-disabled text-xs px-3 py-1.5" disabled aria-disabled="true" title="File unavailable">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
-                <span>View PDF</span>
-              </button>
-              <button type="button" class="btn btn-outline btn-disabled text-xs px-3 py-1.5" disabled aria-disabled="true" title="File unavailable">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                <span>Download</span>
-              </button>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- Category 3: Individual Component Documents -->
+      <!-- Category: Individual Component Documents -->
       <section class="section-wrapper" id="cat-section-individual">
         <p class="section-eyebrow">Individual documents</p>
         <h2 class="section-title">Component research papers</h2>
         <p class="section-desc" style="margin-top: -1.25rem; margin-bottom: 2rem;">Detailed individual academic research reports authored for components 01 through 04.</p>
         <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3" id="cat-grid-individual">
           
-          <!-- Component 01 (s1.pdf) -->
+          <!-- Component 01 -->
           <article class="card flex flex-col justify-between hover-lift reveal" id="doc-card-component-01" style="display: flex; flex-direction: column; justify-content: space-between;">
             <div>
               <div class="flex items-center justify-between gap-3" style="display: flex; justify-content: space-between; align-items: center;">
@@ -412,28 +275,20 @@
                     <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/>
                   </svg>
                   <span class="badge-type">PDF</span>
-                  <span class="doc-size-badge" title="File size">2.73 MB</span>
                 </div>
-                <span class="badge-status badge-status-available">
-                  <span class="badge-status-dot"></span>Available
-                </span>
               </div>
-              <h3 class="card-title text-lg font-medium mt-4">Component 01: Interview Readiness Analysis</h3>
+              <h3 class="card-title text-lg font-medium mt-4">Component 01 — Interview Readiness Analysis</h3>
               <p class="card-text text-sm text-muted-foreground mt-2">Explainable AI-Based Interview Readiness Analysis and Career Path Recommendation — IT22112446 – Kaluarachchi S.M.</p>
             </div>
             <div class="doc-card-actions">
-              <a href="documents/s1.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary text-xs px-3 py-1.5" aria-label="View Component 01 in new browser tab">
+              <a href="https://drive.google.com/file/d/1KKwjB4hdMnj3UJKPFsBSC8vesyOlg95x/view" target="_blank" rel="noopener noreferrer" class="btn btn-secondary text-xs px-3 py-1.5" aria-label="View Component 01 in Google Drive">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
-                <span>View PDF</span>
-              </a>
-              <a href="documents/s1.pdf" download="s1.pdf" class="btn btn-outline text-xs px-3 py-1.5" aria-label="Download Component 01 to device">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                <span>Download</span>
+                <span>View Document</span>
               </a>
             </div>
           </article>
 
-          <!-- Component 02 (d2.pdf) -->
+          <!-- Component 02 -->
           <article class="card flex flex-col justify-between hover-lift reveal" id="doc-card-component-02" style="display: flex; flex-direction: column; justify-content: space-between;">
             <div>
               <div class="flex items-center justify-between gap-3" style="display: flex; justify-content: space-between; align-items: center;">
@@ -442,28 +297,20 @@
                     <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/>
                   </svg>
                   <span class="badge-type">PDF</span>
-                  <span class="doc-size-badge" title="File size">1.04 MB</span>
                 </div>
-                <span class="badge-status badge-status-available">
-                  <span class="badge-status-dot"></span>Available
-                </span>
               </div>
-              <h3 class="card-title text-lg font-medium mt-4">Component 02: Behavior-Aware Impact</h3>
+              <h3 class="card-title text-lg font-medium mt-4">Component 02 — Behavior-Aware Impact</h3>
               <p class="card-text text-sm text-muted-foreground mt-2">Behavior-Aware Career Impact Prediction System — IT22176110 – Daundasekara D.M.D.C.</p>
             </div>
             <div class="doc-card-actions">
-              <a href="documents/d2.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary text-xs px-3 py-1.5" aria-label="View Component 02 in new browser tab">
+              <a href="https://drive.google.com/file/d/1mxLHp1POVdl2dX2FpVwXN01NJPM0ma2N/view" target="_blank" rel="noopener noreferrer" class="btn btn-secondary text-xs px-3 py-1.5" aria-label="View Component 02 in Google Drive">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
-                <span>View PDF</span>
-              </a>
-              <a href="documents/d2.pdf" download="d2.pdf" class="btn btn-outline text-xs px-3 py-1.5" aria-label="Download Component 02 to device">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                <span>Download</span>
+                <span>View Document</span>
               </a>
             </div>
           </article>
 
-          <!-- Component 03 (t3.pdf) -->
+          <!-- Component 03 -->
           <article class="card flex flex-col justify-between hover-lift reveal" id="doc-card-component-03" style="display: flex; flex-direction: column; justify-content: space-between;">
             <div>
               <div class="flex items-center justify-between gap-3" style="display: flex; justify-content: space-between; align-items: center;">
@@ -472,28 +319,20 @@
                     <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/>
                   </svg>
                   <span class="badge-type">PDF</span>
-                  <span class="doc-size-badge" title="File size">637 KB</span>
                 </div>
-                <span class="badge-status badge-status-available">
-                  <span class="badge-status-dot"></span>Available
-                </span>
               </div>
-              <h3 class="card-title text-lg font-medium mt-4">Component 03: Career Safety & Stability</h3>
+              <h3 class="card-title text-lg font-medium mt-4">Component 03 — Career Safety & Stability</h3>
               <p class="card-text text-sm text-muted-foreground mt-2">Career Safety and Industry Stability Analysis Using Machine Learning — IT22201614 – WICKRAMASINGHE T.B.B.</p>
             </div>
             <div class="doc-card-actions">
-              <a href="documents/t3.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary text-xs px-3 py-1.5" aria-label="View Component 03 in new browser tab">
+              <a href="https://drive.google.com/file/d/118UE2zSwqSWNhy-sqPjv1NNu7YapdKnh/view" target="_blank" rel="noopener noreferrer" class="btn btn-secondary text-xs px-3 py-1.5" aria-label="View Component 03 in Google Drive">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
-                <span>View PDF</span>
-              </a>
-              <a href="documents/t3.pdf" download="t3.pdf" class="btn btn-outline text-xs px-3 py-1.5" aria-label="Download Component 03 to device">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                <span>Download</span>
+                <span>View Document</span>
               </a>
             </div>
           </article>
 
-          <!-- Component 04 (m4.pdf) -->
+          <!-- Component 04 -->
           <article class="card flex flex-col justify-between hover-lift reveal" id="doc-card-component-04" style="display: flex; flex-direction: column; justify-content: space-between;">
             <div>
               <div class="flex items-center justify-between gap-3" style="display: flex; justify-content: space-between; align-items: center;">
@@ -502,66 +341,19 @@
                     <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/>
                   </svg>
                   <span class="badge-type">PDF</span>
-                  <span class="doc-size-badge" title="File size">15.77 MB</span>
                 </div>
-                <span class="badge-status badge-status-available">
-                  <span class="badge-status-dot"></span>Available
-                </span>
               </div>
-              <h3 class="card-title text-lg font-medium mt-4">Component 04: Employer Trust & Hiring Risk</h3>
+              <h3 class="card-title text-lg font-medium mt-4">Component 04 — Employer Trust & Hiring Risk</h3>
               <p class="card-text text-sm text-muted-foreground mt-2">AI-Assisted Employer Trust and Hiring Risk Assessment System — IT22546470 – MUAZ M.M.R.</p>
             </div>
             <div class="doc-card-actions">
-              <a href="documents/m4.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary text-xs px-3 py-1.5" aria-label="View Component 04 in new browser tab">
+              <a href="https://drive.google.com/file/d/16ZsN6f0yWgFRMcyTas9qbUpTFPs17TYB/view" target="_blank" rel="noopener noreferrer" class="btn btn-secondary text-xs px-3 py-1.5" aria-label="View Component 04 in Google Drive">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
-                <span>View PDF</span>
-              </a>
-              <a href="documents/m4.pdf" download="m4.pdf" class="btn btn-outline text-xs px-3 py-1.5" aria-label="Download Component 04 to device">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                <span>Download</span>
+                <span>View Document</span>
               </a>
             </div>
           </article>
 
-
-        </div>
-      </section>
-
-      <!-- Category 4: Other Documents -->
-      <section class="section-wrapper bg-secondary-section" id="cat-section-other" style="border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
-        <p class="section-eyebrow">Other documents</p>
-        <h2 class="section-title">Supplementary materials</h2>
-        <p class="section-desc" style="margin-top: -1.25rem; margin-bottom: 2rem;">Ethical review approval, survey questionnaires, evaluation rubrics, and datasets.</p>
-        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3" id="cat-grid-other">
-          
-          <!-- Supplementary Materials -->
-          <article class="card flex flex-col justify-between hover-lift reveal" id="doc-card-other-materials" style="display: flex; flex-direction: column; justify-content: space-between;">
-            <div>
-              <div class="flex items-center justify-between gap-3" style="display: flex; justify-content: space-between; align-items: center;">
-                <div class="flex items-center gap-2" style="display: flex; align-items: center; gap: 0.5rem;">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary" aria-hidden="true">
-                    <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/>
-                  </svg>
-                  <span class="badge-type">PDF</span>
-                </div>
-                <span class="badge-status" title="Pending file upload to /documents/">
-                  <span class="badge-status-dot"></span>File unavailable
-                </span>
-              </div>
-              <h3 class="card-title text-lg font-medium mt-4">Other Documents & Supplementary Material</h3>
-              <p class="card-text text-sm text-muted-foreground mt-2">Supplementary research questionnaires, ethics approval documentation, evaluation rubrics, and data sheets.</p>
-            </div>
-            <div class="doc-card-actions">
-              <button type="button" class="btn btn-secondary btn-disabled text-xs px-3 py-1.5" disabled aria-disabled="true" title="File unavailable">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
-                <span>View PDF</span>
-              </button>
-              <button type="button" class="btn btn-outline btn-disabled text-xs px-3 py-1.5" disabled aria-disabled="true" title="File unavailable">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                <span>Download</span>
-              </button>
-            </div>
-          </article>
         </div>
       </section>
 
