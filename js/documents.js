@@ -56,6 +56,46 @@ const documents = [
     category: 'individual',
     type: 'PDF',
     keywords: ['m4', 'component 4', 'component 04', 'muaz', 'it22546470', 'trust', 'hiring', 'risk']
+  },
+  {
+    id: 'thesis-draft-component-01',
+    title: 'Thesis draft Component 01 — Interview Readiness Analysis',
+    description: 'Thesis draft for Component 01 — Interview Readiness Analysis.',
+    driveId: '1alMBVsPZs6t5ZKkY2DzpLNBTxUoSAPZu',
+    viewUrl: 'https://drive.google.com/file/d/1alMBVsPZs6t5ZKkY2DzpLNBTxUoSAPZu/view?usp=sharing',
+    category: 'thesis',
+    type: 'PDF',
+    keywords: ['thesis', 'draft', 's1', 'component 1', 'component 01', 'interview', 'readiness']
+  },
+  {
+    id: 'thesis-draft-component-02',
+    title: 'Thesis draft Component 02 — Behavior-Aware Impact',
+    description: 'Thesis draft for Component 02 — Behavior-Aware Impact.',
+    driveId: '13XLXYj4TMBvT1cqf0xYAiHQdvns1ra3D',
+    viewUrl: 'https://drive.google.com/file/d/13XLXYj4TMBvT1cqf0xYAiHQdvns1ra3D/view?usp=sharing',
+    category: 'thesis',
+    type: 'PDF',
+    keywords: ['thesis', 'draft', 'd2', 'component 2', 'component 02', 'behavior', 'impact']
+  },
+  {
+    id: 'thesis-draft-component-03',
+    title: 'Thesis draft Component 03 — Career Safety & Stability',
+    description: 'Thesis draft for Component 03 — Career Safety & Stability.',
+    driveId: '1LWPddpvMJJzLGpEXhubE5Sp8TZbEVDKl',
+    viewUrl: 'https://drive.google.com/file/d/1LWPddpvMJJzLGpEXhubE5Sp8TZbEVDKl/view?usp=sharing',
+    category: 'thesis',
+    type: 'PDF',
+    keywords: ['thesis', 'draft', 't3', 'component 3', 'component 03', 'safety', 'stability']
+  },
+  {
+    id: 'thesis-draft-component-04',
+    title: 'Thesis draft Component 04 — Employer Trust & Hiring Risk',
+    description: 'Thesis draft for Component 04 — Employer Trust & Hiring Risk.',
+    driveId: '146hda7cHsqI5m3Z-U4jz-B-6EiV0X1Xx',
+    viewUrl: 'https://drive.google.com/file/d/146hda7cHsqI5m3Z-U4jz-B-6EiV0X1Xx/view?usp=sharing',
+    category: 'thesis',
+    type: 'PDF',
+    keywords: ['thesis', 'draft', 'm4', 'component 4', 'component 04', 'trust', 'hiring', 'risk']
   }
 ];
 
@@ -67,6 +107,13 @@ const documentCategories = [
     eyebrow: 'Individual documents',
     title: 'Component research papers',
     description: 'Detailed individual academic research reports authored for components 01 through 04.'
+  },
+  {
+    id: 'thesis',
+    name: 'Thesis Drafts',
+    eyebrow: 'Thesis drafts',
+    title: 'Component thesis drafts',
+    description: 'Thesis draft documents for components 01 through 04.'
   }
 ];
 
